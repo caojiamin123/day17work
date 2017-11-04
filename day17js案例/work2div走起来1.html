@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>work2div走起来1</title>
+		<style type="text/css">
+			#div{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"></div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var odiv=document.getElementById("div");
+			var count=0;
+			
+			odiv.onclick=function(){
+				setInterval(function(){
+					count++;
+					odiv.style.left=count+"px";
+				},30)
+			}
+		}
+	</script>
+</html>

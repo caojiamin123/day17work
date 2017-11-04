@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>work15运动3</title>
+		<style type="text/css">
+			#div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left:100px;
+				top: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"></div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var odiv=document.getElementById("div");
+			var timer=null;
+			
+			odiv.onclick=function(){
+				move(odiv);
+			}
+			
+			function move(obj){
+				var start=100;
+				var itarget=400;
+				var dis=itarget-start;
+				var time=5000;
+				var count=Math.floor(time/30);
+				var step=dis/count;
+				var n=0;
+				timer=setInterval(function(){
+					n++;
+					odiv.style.left=100+step*n+"px";
+					if(n==count){
+						clearInterval(timer);
+					}
+				},30)
+			}
+		}
+	</script>
+</html>

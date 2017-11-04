@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>work6定时器</title>
+	</head>
+	<body>
+		<textarea name="" id="txt" rows="10" cols="30"></textarea>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var otxt=document.getElementById("txt");
+			var last=new Date().getTime();
+			var timer;
+			
+			timer=setInterval(function(){
+				var now=new Date().getTime();
+				otxt.value+=now-last+"\n";
+				last=new Date().getTime();
+			},-100);
+			
+			document.onclick=function(){
+				clearInterval(timer);
+			}
+		}
+	</script>
+</html>

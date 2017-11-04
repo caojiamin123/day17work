@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>work24运动12</title>
+		<style type="text/css">
+			#div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				left:0;
+				top: 0;
+				opacity: .3;
+				filter: alpha(opacity:30);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"></div>
+	</body>
+	<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var odiv=document.getElementById("div");
+			var timer=null;
+			
+			odiv.onclick=function(){
+				move(odiv,1,400,"opacity");
+			}
+		}
+	</script>
+</html>

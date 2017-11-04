@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>work9多个物体运动</title>
+		<style type="text/css">
+			div{
+				width: 80px;
+				height: 80px;
+				background: red;
+				margin: 10px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+	<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var adiv=document.getElementsByTagName("div");
+			
+			for(var i=0;i<adiv.length;i++){
+				adiv[i].onmouseover=function(){
+					move(this,500,3000,"width");
+				}
+				
+				adiv[i].onmouseout=function(){
+					move(this,80,3000,"width");
+				}
+			}
+		}
+	</script>
+</html>

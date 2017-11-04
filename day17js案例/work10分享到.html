@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>work10分享到</title>
+		<style type="text/css">
+			#div{
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: fixed;
+				right: -200px;
+				top: 50%;
+				margin-top: -100px;
+			}
+			#bar{
+				width: 20px;
+				height: 66px;
+				text-align: center;
+				padding-top: 14px;
+				position: absolute;
+				left: -20px;
+				top:60px;
+				background: #000;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div">
+			<span id="bar">分享到</span>
+		</div>
+	</body>
+	<script src="js/move1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var odiv=document.getElementById("div");
+			
+			odiv.onmouseover=function(){
+				move(this,{right:0},1000);
+			}
+			
+			odiv.onmouseout=function(){
+				move(this,{right:-200},300)
+			}
+		}
+	</script>
+</html>

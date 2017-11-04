@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>work4offsetWidth</title>
+		<style type="text/css">
+			#div{
+				width: 300px;
+				height: 300px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"></div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var odiv=document.getElementById("div");
+			
+			odiv.onclick=function(){
+				setInterval(function(){
+					odiv.style.width=odiv.offsetWidth+1+"px";
+				},30)
+			}
+		}
+	</script>
+</html>
